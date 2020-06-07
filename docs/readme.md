@@ -11,12 +11,12 @@
 -   Мобильная навигация
 -   Форма обратной связи (Ajax, PHP)
 
-[**Онлайн демо**](https://inna-kim.github.io/Portfolio/)
+[**Онлайн демо**](https://inna-kim.github.io/My-portfolio/)
 
 ### Тестировать локально
 
 ```
-git clone https://github.com/Inna-Kim/Portfolio.git
+git clone https://github.com/Inna-Kim/My-portfolio.git
 
  ```
 
