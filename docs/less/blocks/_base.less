@@ -1,0 +1,213 @@
+*{
+    box-sizing: border-box;
+    &::selection{
+        background-color: var(--select);
+     }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #000;
+  
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 16px;
+     
+    position: relative;
+}
+
+#page-nav {
+    display: none;
+    // Десктоп
+    @media (min-width: 1200px){
+        display: block;
+        position: fixed;
+        z-index: 100;
+        right: 86px;
+        top: 39%;
+    } 
+}
+
+#page-nav li {
+    width: 14px;
+    height: 14px;
+    background-color: rgb(234, 115, 109);
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: .5s;
+}
+  
+
+#page-nav li a {
+    display: block;
+    height: 100%;
+}
+
+#page-nav li.active{
+    background-color: rgb(137, 180, 203);
+}
+
+  
+#backTop a{
+    color:  rgb(234, 115, 109);
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 40px;
+    transition: .5s;
+
+    &:hover{
+      color:var(--mailhov) ;
+    }
+}
+
+:root{
+    --text:#393f47;
+    --textcurs:#fbdc4d;
+    --dotts:#ea736d;
+    --brdnav:#fbdc4d;
+    --iconin:#0077b5;
+    --icongh:#6cc644;
+    --iconvk:#6782a3;
+    --btnbg:#fbdc4d;
+    --btnhov:#ffd200;
+    --btnactv:#e1bc10;
+    --btncont:#464646;
+    --btnconthov:#797979;
+    --btncontactv:#181818;
+    --mailhov:#039be5;
+    --mailactv:#ea655f;
+    --bgportf:#f4f8f9;
+    --togglhov:#ed574f;
+    --toggl:#adbdc4;
+    --bgcard:#fdd446;
+    --cardhov:#f0d961;
+    --cardbtnhov:#ea736d;
+    --cardbtnactv:#d4423b;
+    --email:#039be5;
+    --select:#fbdc4d;
+    --hover:#ea736d;
+    
+
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+}
+
+#overlay.active{
+    display: block;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+button,
+input {
+    outline: none;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+textarea{
+    resize: none;
+    display: block;
+}
+
+
+.container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    
+       @media(min-width: 576px){
+           max-width: 540px;
+           padding-left: 0;
+           padding-right: 0;
+       }
+  
+
+      // Планшет
+   @media (min-width: 768px){
+        max-width: 720px;
+     
+    }
+
+    @media(min-width: 992px){
+        max-width: 960px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        max-width: 1140px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.button_main button {
+    font-size: 22px;
+    font-family: "M PLUS 1p", sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+} 
+
+.none{
+    display: none;
+}
+
+.title2{
+    font-size: 42px;
+    font-weight: 800;
+    
+    // Планшет
+    @media (min-width: 768px){
+        font-size: 52px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        font-size: 64px;
+    }
+}

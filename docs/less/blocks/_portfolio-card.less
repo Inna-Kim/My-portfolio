@@ -1,0 +1,239 @@
+//  Карточки
+
+#portfolio-projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.portfolio-cards_content{
+  
+    // Десктоп
+    @media (min-width: 1200px){
+        margin-bottom: 155px;
+    }
+}
+
+.portfolio-card{
+    max-width: 290px;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 22px;
+
+        // Планшет
+    @media (min-width: 768px){
+        max-width: 340px;
+        height: 340px;
+        margin-bottom: 0;
+        
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        max-width: 360px;
+        height: 320px;
+    }
+}
+
+.portfolio-card_poster {
+    margin-bottom: 21px;
+    display: block;
+    position: relative;
+    background-color: var(--bgcard);
+    overflow: hidden;
+    transition: .5s;
+
+        &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color:rgba(239, 215, 95, 0.85);
+        transition: .5s;
+        transform: translateY(105%);
+    }
+    &:hover:before{
+        transform: translateY(0);
+    }
+     // Планшет
+     @media (min-width: 768px){
+        margin-bottom: 25px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        margin-bottom: 30px;
+    }
+}
+
+
+.more-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    height:51px ;
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    color: var(--cardbtnhov);
+    background-color: #fff;
+    border: none;
+    opacity: 0;
+    transition: .5s;
+
+    &:hover{
+        background-color: var(--cardbtnhov);
+        color:#fff
+    }
+
+    &:active{
+        background-color: var(--cardbtnactv);
+        color:#fff
+    }
+}
+
+
+.portfolio-card_poster:hover .more-btn{
+    opacity: 1;
+    transition: .5s;
+}
+
+
+.portfolio-card_poster img{
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    transition: .3s;
+    background-color: var(--btnbg);
+}
+
+
+.portfolio-card--big {
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        max-width: 555px;
+        margin-bottom: 50px;
+        height: 480px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.portfolio-card_descrip a{
+    position: relative;
+    z-index: 2;
+    
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
+    transition: .5s;
+
+    &:after{
+        content: "";
+        position: absolute;
+        z-index: 2;
+        bottom: 1px;
+        left: 0;
+        border-bottom: solid 2px #ed574f;
+        width: 0;
+        
+        transition: .5s;
+    }
+    
+    &:hover:after{
+      width: 100%;
+        color: #ed574f;
+        transition: .5s;
+    }
+    
+    &:hover{
+       
+        color: #ed574f;
+    }
+    // Планшет
+    @media (min-width: 768px){
+        font-size: 24px;
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        font-size: 26px;
+    }
+}
+
+ 
+.portfolio-card--big .portfolio-card_descrip a{
+        font-size: 22px;
+
+     // Планшет
+     @media (min-width: 768px){
+        font-size: 24px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        font-size: 32px;
+    }
+}
+
+.portfolio-card--big .portfolio-card_descrip p{ 
+    font-size: 16px;
+
+     // Планшет
+     @media (min-width: 768px){
+        font-size: 18px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        font-size: 26px;
+    }
+}
+
+ 
+.portfolio-card_descrip p {
+    margin-top: 9px;
+    font-size: 16px;
+    font-weight: 100;
+    color: #585858;
+
+    // Планшет
+    @media (min-width: 768px){
+        font-size: 18px;
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        font-size: 20px;
+    }
+}
+
+.display{
+
+     // Планшет
+     @media (min-width: 768px){
+         display:none;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        display: block;
+    }
+}
+

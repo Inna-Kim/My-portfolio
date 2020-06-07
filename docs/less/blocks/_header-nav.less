@@ -1,0 +1,364 @@
+.header-nav {
+    max-width: 1400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 98px;
+
+    @media(min-width: 1430px){
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    // Планшет
+    @media (min-width: 768px){
+        margin-bottom: 75px;
+    }
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        margin-bottom: 138px;
+        
+    }
+}
+
+.header-logo {
+    
+}
+
+.logo{
+    position: relative;
+    z-index: 2;
+    font-size: 42px;
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+     transition: .5s;
+     
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      left: -5px;
+      right: -5px;
+      height: 10px;
+      background-color: #fbdc4d;  
+      z-index: -1;
+      width: 76px;
+      transition: .5s;
+    }
+    &:hover:after{
+        background-color:var(--hover);
+     }
+
+    &:hover{
+        opacity: 0.6;
+        transition: .5s;
+    }
+}
+
+.header-menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+     
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 30px;
+    max-width: 400px;
+    width: 100%;
+    transform: translateX(100%);
+    transition: .5s;
+    
+    // Десктоп
+    @media (min-width: 1200px){
+        position: relative;
+        max-width: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 0;
+        padding-left: 0;
+        width: auto;
+        transform: translateX(0);
+    }
+}
+
+
+.header-menu.active{
+    transform: translateX(0);
+}
+
+.header-link{ 
+    position: relative;
+    margin-bottom: 25px;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    z-index: 2;
+  
+
+    &:last-child{
+        margin-bottom:35px;
+    }
+ 
+        // Десктоп
+    @media (min-width: 1200px){
+        margin-right: 72px;
+        margin-bottom: 0;
+        
+        
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: -5px;
+            right: -5px;
+            width:  0;
+            height: 5px;
+            background-color: #fbdc4d;  
+            z-index: -1;
+            transition: .5s;
+        }
+        
+        &:hover:after{
+            width: 110%;
+            z-index: -1;
+        }
+        
+        &:focus{
+            border:dotted #ea736d 2px;
+            transition: .5s;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    } 
+}
+
+
+.sidebar-logo{
+    margin-bottom: 35px;
+     
+        // Десктоп
+    @media (min-width: 1200px){
+        display: none;
+    }
+}
+ 
+.decktop{
+    display: none;
+
+    // Десктоп
+    @media (min-width: 1200px){
+        display:unset;
+    }
+}
+
+.mobil{
+    width: fit-content;
+    transition: .5s;
+    &:hover{
+        border-bottom: 1px solid #000;
+        left: 0;
+        right: 0;
+        bottom: 3px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px){
+        display:none;
+    }
+}
+
+ 
+.sidebar{
+     margin-bottom: 35px;
+}
+
+
+.sidebar-icons{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+    
+   &:last-child{
+       margin-right: 0;
+   }
+
+   &:hover{
+    transform: scale(1.2);
+ }
+
+   @media(min-width: 1200px){
+        display: none;
+   }
+}
+
+.sidebar a{
+    color: #fff;
+    font-size: 22px;
+}
+
+.fab{
+    font-size: 31px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.icons-vb {
+   background-color: rgb(108, 25, 185);
+}
+  
+
+.icons-wp{
+   background-color: rgb(7, 121, 26);
+}
+
+.sidebar-email{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000;
+    transition: .5s;
+          
+    &:hover{
+        color: var(--mailhov);
+    }
+
+    &:active{
+        color:var(--mailactv)
+    }
+     
+    @media(min-width: 1200px){
+        display: none;
+   }
+}
+
+.header-icons {
+    display: none;
+
+    @media(min-width: 1200px){
+        display: flex;
+    }
+}
+
+
+.icons-item {
+    display:inline-block;
+    width: 30px;
+    margin-right: 20px;
+    color: #000;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+
+.icons-item svg{
+    fill: #000000;
+}
+
+
+.icons-item__wp{
+    &:hover{
+        color:rgb(15, 167, 40);
+    }
+}
+
+
+.icons-item__gh{
+    &:hover{
+        color:var(--icongh);
+    }
+    &:active{
+        color:var(--icongh);
+    }
+}
+
+.icons-item__vb{
+    width: 30px;
+    &:hover{
+        color:rgb(108, 25, 185);
+    }
+}
+
+.toggle-menu{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   height: 40px;
+   position: relative;
+   z-index: 15;
+    margin-right: 17px;
+
+    // Планшет
+    @media (min-width: 768px){
+        margin-right: 41px;
+ }
+   @media(min-width: 1200px){
+       display: none;
+   }
+}
+
+.toggle-menu span{
+    width: 40px;
+    height: 5px;
+    background-color: #000;
+    display:block;
+    position: relative;
+
+    &:before,
+    &:after{
+        content:"";
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: #000000;
+        left: 0;
+    }
+
+    &:before{
+        top: -10px;
+    }
+
+    &:after{
+        bottom: -10px;
+    }
+}
+
+.toggle-menu.active{
+    span{
+        background-color: transparent;
+
+        &:before{
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        &:after{
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+    }
+}
