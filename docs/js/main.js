@@ -114,7 +114,7 @@ $(document).ready(function(){
         submitHandler: function (form) {
             ajaxFormSubmit();
         }
-    })
+    });
 
     // Функция AJAX запроса на сервер
     function ajaxFormSubmit() {
